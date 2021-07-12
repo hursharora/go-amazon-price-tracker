@@ -31,6 +31,7 @@ func main() {
 		if i.price <= i.targetPrice {
 			log.Printf("The price of \"%s\" is $%.2f! Below target price of $%.2f", i.name, i.price, i.targetPrice)
 			log.Printf("Emailing %s", i.email)
+			sendEmail(i)
 		} else {
 			log.Printf("The price of \"%s\" is above target, checking again in 5 minutes", i.name)
 			go func(i item) {
