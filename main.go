@@ -25,7 +25,7 @@ func main() {
 		go scrapeItem(track, c)
 	}
 
-	// infinite loop to check price every scrape price of item every 5 minutes
+	// infinite loop to scrape price of item every 5 minutes
 	for i := range c {
 		if i.price <= i.targetPrice {
 			log.Printf("The price of \"%s\" is $%.2f! Below target price of $%.2f", i.name, i.price, i.targetPrice)
