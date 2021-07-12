@@ -19,7 +19,6 @@ func main() {
 	godotenv.Load()
 	tracks := loadItemTrack()
 
-	// fmt.Print(os.Getenv("EMAIL"))
 	c := make(chan item)
 
 	for _, track := range tracks {
